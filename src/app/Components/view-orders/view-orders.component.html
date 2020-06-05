@@ -1,0 +1,34 @@
+<table class="table table-striped table-bordered table-sm">
+  <thead class="thead-dark">
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone #</th>
+      <th>Street Address</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Zip Code</th>
+      <th>Delivery Date</th>
+      <th>Food Item</th>
+      <th>Completed?</th>
+      <th>Change</th>
+      <th>DatabaseID</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let orders of foodOrderArray">
+      <td>{{orders.name}}</td>
+      <td>{{orders.email}}</td>
+      <td>{{orders.phone}}</td>
+      <td>{{orders.address}}</td>
+      <td>{{orders.city}}</td>
+      <td>{{orders.state}}</td>
+      <td>{{orders.zip}}</td>
+      <td>{{orders.deliveryDate | date}}</td>
+      <td>{{orders.foodItem}}</td>
+      <td>{{orders.fulfilled}}</td>
+      <td><button (click)="changeOrder(orders.databaseID)" class="btn btn-warning">Change</button></td>
+      <td>{{orders.databaseID}}</td>
+    </tr>
+  </tbody>
+</table>

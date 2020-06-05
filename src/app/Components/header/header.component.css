@@ -1,0 +1,35 @@
+.header {
+    background-color: #c2580a;
+    overflow:auto
+}
+
+
+
+.headerDivide {
+    
+    float: left;
+    width:49.2%;
+    font-size: 30px;
+    padding:10px;
+    padding-left:80px;
+}
+
+.headerSubDivide{
+    text-align: right;
+}
+
+
+.link {
+
+    list-style-type:none;
+    display: inline-block;
+    margin-right: 35px;
+}
+
+a {
+    color: #cbd7e3;
+}
+
+.headerText {
+    color: #cbd7e3;
+}

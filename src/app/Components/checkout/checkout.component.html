@@ -1,0 +1,97 @@
+<div class="mid-1of2Left">
+    <form #orderForm="ngForm" (ngSubmit)="[showModal=true, sendSMSValidation()]" class="container-fluid">
+        <div class="row">
+            <div class="checkoutFieldsBlock">
+                <h3>Who are you?</h3>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" class="form-control" [(ngModel)]="newFoodOrder.name" style="width:200px" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" class="form-control" [(ngModel)]="newFoodOrder.email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone #</label>
+                    <input type="tel" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="form-control" [(ngModel)]="newFoodOrder.phone" required>
+                    <small>Required Format: 123-456-7890</small>
+                </div>
+            </div>
+            <div class="checkoutFieldsBlock">
+                <h3>Where am I taking these treats?</h3>
+                <div ngModelGroup="address">
+                    <div class="form-group">
+                        <label for="address">Address</label>
+                        <input type="text" name="address" id="address" class="form-control" [(ngModel)]="newFoodOrder.address" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input type="text" id="city" name="city" class="form-control" [(ngModel)]="newFoodOrder.city" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="state">State</label>
+                        <input type="text" id="state" name="state" class="form-control" [(ngModel)]="newFoodOrder.state" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="zip">Zip</label>
+                        <input type="text" id="zip" name="zip" class="form-control" [(ngModel)]="newFoodOrder.zip" required>
+                    </div>
+                </div>
+            </div>
+            <div class="checkoutFieldsBlock">
+                <h3>When do you want these?</h3>
+                <div class="form-group">
+                    <label for="date">Date Requested</label>
+                    <input type="date" id="date" name="date" min="{{date | date:'yyyy-MM-dd'}}" class="form-control" [(ngModel)]="newFoodOrder.deliveryDate" required>
+                </div>
+            </div>
+        </div>
+        <div class="checkoutFieldsBlock">
+            <button type="reset" class="btn btn-warning">Reset</button>
+            <button class="btn btn-success">Submit Order</button>
+        </div>
+    </form>
+</div>
+<div class="mid-1of2Right">
+    <table class="table">
+        <thead class="thead-light">
+            <tr>
+                <th>Order Summary</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let items of checkoutService.cart">
+                <td>
+                    <div class="foodListRowComponentLeft">{{items.description}}</div>
+                    <div class="foodListRowComponentRight"><button (click)="deleteCartItem(items.id)" class="btn btn-warning">Delete</button></div>
+
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" [ngClass]="{'show': showModal}" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Almost done! For validation purposes, we're texting a code to you. Please enter this code into the box below!</h5>
+                <button type="button" class="close" (click)="showModal=false" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="smsCode">SMS Code</label>
+                    <input type="text" class="form-control" id="smsCode" name="smsCode" [(ngModel)]="newFoodOrder.smsvalidationKey" style="width:200px" required>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" (click)="showModal=false" data-dismiss="modal">Cancel</button>
+                <button type="button" (click)="sendNewOrder()" class="btn btn-primary">Send Order!</button>
+            </div>
+        </div>
+    </div>
+</div>

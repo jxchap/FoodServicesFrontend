@@ -1,0 +1,44 @@
+  <div class="mid-1of2">
+    <div class="section-food-selection">
+      <h3>Browse my store and add some treats!</h3>
+      <div class="container">
+        <table class="table">
+          <thead class="thead-light">
+            <tr>
+              <th>Your Order</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let items of checkoutService.cart">
+              <td>
+                <div class="foodListRowComponentLeft">{{items.description}}</div>
+                <div class="foodListRowComponentRight"><button (click)="deletePreOrderItem(items.id)"
+                    class="btn btn-warning">Remove</button></div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="mid-1of2">
+
+      <h2>{{foodWindowH2Title}}</h2>
+      <div>
+        <div class="foodDetails"><img [src]="myImgSource">
+        </div>
+        <div class="foodDetails">
+          <p>{{foodTextDescription}}</p>
+        </div>
+      </div>
+
+    <div class="controlButtons">
+      
+      <button (click)="sendNewFoodToPreOrderForm()" type="button"
+        [ngClass]="largeOrderWarning ? 'btn btn-danger' : 'btn btn-success'">Add to Order</button>
+      <button (click)="previousFood()" type="button" class="btn btn-primary">Previous</button>
+      <button (click)="nextFood()" type="button" class="btn btn-primary">Next</button>
+      <button class="btn btn-primary" (click)="goToCheckout()">Checkout</button>
+      <p *ngIf="largeOrderWarning">Too many treats! Please call me for large orders :)</p>
+    </div>
+  </div>

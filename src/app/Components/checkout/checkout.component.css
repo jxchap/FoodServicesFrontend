@@ -1,0 +1,36 @@
+.mid-1of2Left {
+    width: 69.8%;
+    float: left;
+}
+
+.mid-1of2Right {
+    width: 30%;
+    float: left;
+    padding: 30px;
+}
+
+.checkoutFieldsBlock {
+    width: 40%;
+    margin: 20px;
+    float: left;
+}
+
+tbody>tr {
+    background-color: #f2f1ef;
+}
+
+.foodListRowComponentLeft {
+    width: 85%;
+    float: left;
+    margin-top: 10px;
+}
+
+.foodListRowComponentRight {
+    width: 15%;
+    float: left;
+    margin-top: 10px;
+}
+
+.modal.show {
+    display: block;
+}

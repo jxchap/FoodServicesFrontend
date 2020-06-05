@@ -1,0 +1,88 @@
+tbody > tr{
+    background-color: #f2f1ef;
+}
+
+.foodListRowComponentLeft {
+    width:85%;
+    float:left; 
+    margin-top:10px;
+}
+
+.foodListRowComponentRight {
+    width:15%;
+    float:left; 
+    margin-top:10px;
+}
+
+
+.mid-1of2 {
+    width:49.2%;
+    float:left; 
+    margin-top:10px;  
+}
+
+.btn-group{
+    margin-left:10px;
+    padding: 0 25%;
+}
+
+button {
+    margin: 0 10px;
+}
+
+h2 {
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 180%;
+    word-spacing: 2px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+
+h3 {
+    padding: 20px 15%;
+}
+
+.foodListHeaderBoxLeft{
+    width:85%;
+    display: inline-block;
+}
+
+.foodListHeaderBoxRight{
+    width:15%;
+    display: inline-block;
+}
+
+.controlButtons{
+    display: inline-block;
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+.doNotShow {
+    visibility:collapse;
+    height:0px;
+}
+
+.section-food-selection{
+    overflow: auto;
+}
+
+.foodDetails {
+    width:49.2%;
+    float:left; 
+    margin-top:10px; 
+}
+
+.foodDetails > img {
+    border-radius: 25px;
+    width: 350px;
+    height: 450px;
+    
+}
+
+p {
+    font-size: 22px;
+}

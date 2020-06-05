@@ -1,0 +1,16 @@
+
+
+
+.section-footer{
+    bottom: 0;
+    width: 100%;
+    
+}
+
+.body{
+    display: flex;
+    flex-direction: column;
+    background-color: #dee7f0;
+    height: calc(100vh - 64.67px - 42px);
+    overflow: auto;
+  }
