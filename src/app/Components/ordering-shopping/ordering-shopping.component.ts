@@ -100,13 +100,14 @@ export class OrderingShoppingComponent implements OnInit {
 
 
   foodTextDescriptionArray = [
-    "Crunchy outside, gooey inside, these cookies are just amazing! Every bite is filled with delicous dark chocolate and toasted walnuts. If you're not the type  who feels guilt after a luxurious snack, then these are for you! Heads up - Glass of milk is pretty much mandatory.",
-    "Peanut butterPeanut butterPeanut butterPeanut butterPeanut butterPeanut butterPeanut butterPeanut butterPeanut butterPeanut butterPeanut butterPeanut butterPeanut butterPeanut butterPeanut butterPeanut butterPeanut butterPeanut butterPeanut butterPeanut butterPeanut butter",
-    "BROWNIES BROWNIES BROWNIES BROWNIES BROWNIES BROWNIES BROWNIES BROWNIES BROWNIES BROWNIES BROWNIES BROWNIES BROWNIES BROWNIES BROWNIES BROWNIES BROWNIES BROWNIES BROWNIES BROWNIES BROWNIES BROWNIES BROWNIES BROWNIES BROWNIES BROWNIES BROWNIES BROWNIES BROWNIES BROWNIES BROWNIES ",
-    "FRESH SQUEEZED ORANGE JUICEFRESH SQUEEZED ORANGE JUICEFRESH SQUEEZED ORANGE JUICEFRESH SQUEEZED ORANGE JUICEFRESH SQUEEZED ORANGE JUICEFRESH SQUEEZED ORANGE JUICEFRESH SQUEEZED ORANGE JUICEFRESH SQUEEZED ORANGE JUICEFRESH SQUEEZED ORANGE JUICEFRESH SQUEEZED ORANGE JUICE",
-    "RASPBERRY LEMON CHEESECAKERASPBERRY LEMON CHEESECAKERASPBERRY LEMON CHEESECAKERASPBERRY LEMON CHEESECAKERASPBERRY LEMON CHEESECAKERASPBERRY LEMON CHEESECAKERASPBERRY LEMON CHEESECAKERASPBERRY LEMON CHEESECAKERASPBERRY LEMON CHEESECAKERASPBERRY LEMON CHEESECAKERASPBERRY LEMON CHEESECAKE",
-    "BANANA BREADBANANA BREADBANANA BREADBANANA BREADBANANA BREADBANANA BREADBANANA BREADBANANA BREADBANANA BREADBANANA BREADBANANA BREADBANANA BREADBANANA BREADBANANA BREADBANANA BREADBANANA BREADBANANA BREADBANANA BREADBANANA BREADBANANA BREADBANANA BREADBANANA BREADBANANA BREADBANANA BREAD",
-    "Granola BarsGranola BarsGranola BarsGranola BarsGranola BarsGranola BarsGranola BarsGranola BarsGranola BarsGranola BarsGranola BarsGranola BarsGranola BarsGranola BarsGranola BarsGranola BarsGranola BarsGranola BarsGranola BarsGranola BarsGranola BarsGranola BarsGranola BarsGranola Bars"
+    
+    "1 - Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "2 - Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "3 - Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "4 - Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "5 - Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "6 - Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "7 - Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
   ]
   foodTextDescription = this.foodTextDescriptionArray[0]
 
