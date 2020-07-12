@@ -10,7 +10,7 @@ import { IncomingFoodOrder } from '../../classes/food-order';
 })
 export class UpdateOrderComponent implements OnInit {
 
-singleFoodOrder : IncomingFoodOrder = new IncomingFoodOrder(0,'','',0,'','','','',new Date(),'',false)
+singleFoodOrder : IncomingFoodOrder = new IncomingFoodOrder(0,'','',0,'','','',0,new Date(),'',false)
 databaseID: number;
 date = new Date();
 

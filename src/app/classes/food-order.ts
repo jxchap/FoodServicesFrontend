@@ -7,7 +7,7 @@ export class OutGoingFoodOrder {
       public address: string,
       public city: string,
       public state: string,
-      public zip: string,
+      public zip: number,
       public deliveryDate: Date,
       public orderListItems: any[],
       public SMSValidationKey: string
@@ -25,7 +25,7 @@ export class IncomingFoodOrder {
         public address: string,
         public city: string,
         public state: string,
-        public zip: string,
+        public zip: number,
         public deliveryDate: Date,
         public foodItem: string,
         public isFulfilled: boolean
