@@ -37,13 +37,14 @@ export class CheckoutComponent implements OnInit {
   }
 
   sendNewOrder() {
-    let finalCart = this.finalizeCart()
-    this.newFoodOrder.orderListItems = finalCart
+    this.newFoodOrder.orderListItems = this.finalizeCart()
     this.dataServicer.createFoodOrder(this.newFoodOrder).subscribe(
-      response => console.log(response)
+      response => {console.log(response)
+          this.checkoutService.cart = []
+          this.router.navigate(['order-finished'])
+      }
     )
-    this.checkoutService.cart = []
-    this.router.navigate(['order-finished'])
+
   }
 
   finalizeCart() {

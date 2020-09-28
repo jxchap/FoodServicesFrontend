@@ -32,24 +32,20 @@ date = new Date();
 
 updateOrder(databaseID){
   this.dataServicer.updateFoodOrder(this.singleFoodOrder, this.databaseID).subscribe(
-    response => console.log(response))
-
-    this.go_next()
+    response => this.router.navigate(['view-orders']))
 }
 
   deleteOrder(databaseID){
     this.dataServicer.deleteFoodOrder(this.databaseID).subscribe(
-      response => console.log(response))
-
-      this.go_next()
+      response => this.router.navigate(['view-orders']))
   }
 
-  go_next(){
-    setTimeout(() => {
-        this.router.navigate(['view-orders'])
-      }
-      , 1000);
-}
+//   go_next(){
+//     setTimeout(() => {
+//         this.router.navigate(['view-orders'])
+//       }
+//       , 1000);
+// }
   
 
 }

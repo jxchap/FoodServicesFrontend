@@ -11,9 +11,11 @@ import { HomeComponent } from './Components/home/home.component';
 import { CheckoutComponent } from './Components/checkout/checkout.component';
 import { ErrorComponent } from './Components/error/error.component';
 import { FinishedorderComponent } from './Components/finishedorder/finishedorder.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ViewOrdersComponent } from './Components/view-orders/view-orders.component';
 import { UpdateOrderComponent } from './Components/update-order/update-order.component';
+import { LoginComponent } from './Components/login/login.component';
+import { HttpIntercepterBasicAuthService } from './service/http-intercepter-authentication.service';
 
 
 @NgModule({
@@ -28,6 +30,7 @@ import { UpdateOrderComponent } from './Components/update-order/update-order.com
     FinishedorderComponent,
     ViewOrdersComponent,
     UpdateOrderComponent,
+    LoginComponent,
 
   ],
   imports: [
@@ -36,7 +39,8 @@ import { UpdateOrderComponent } from './Components/update-order/update-order.com
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    {provide: HTTP_INTERCEPTORS, useClass: HttpIntercepterBasicAuthService, multi: true }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
